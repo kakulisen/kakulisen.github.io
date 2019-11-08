@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 森里滴话
+title: 森的技术随笔
 subtitle: ''
 description: '技术随笔'
 keywords:
-author: kakulisen
+author: 森
 language: en
-timezone: 'CN'
+timezone: 'Asia/Shanghai'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -97,3 +97,4 @@ theme: next
 deploy:
   type: git
   repo: https://github.com/kakulisen/kakulisen.github.io.git
+  branch: master
