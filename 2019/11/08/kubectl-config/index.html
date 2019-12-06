@@ -79,14 +79,14 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="参考文档： Overview of kubectl kubectl-commands Organizing Cluster Access Using kubeconfig Files  配置文件(kubeconfig file)配置文件有什么用呢？用来组织集群的信息，包括集群(cluster)，用户(user)，命名空间(namespace)和授权机制(authentication mechani">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https:&#x2F;&#x2F;kakulisen.github.io&#x2F;2019&#x2F;11&#x2F;06&#x2F;hello-world&#x2F;index.html">
-<meta property="og:site_name" content="森里滴话">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:title" content="kubectl配置">
+<meta property="og:url" content="https:&#x2F;&#x2F;kakulisen.github.io&#x2F;2019&#x2F;11&#x2F;08&#x2F;kubectl-config&#x2F;index.html">
+<meta property="og:site_name" content="森的技术随笔">
+<meta property="og:description" content="参考文档： Overview of kubectl kubectl-commands Organizing Cluster Access Using kubeconfig Files  配置文件(kubeconfig file)配置文件有什么用呢？用来组织集群的信息，包括集群(cluster)，用户(user)，命名空间(namespace)和授权机制(authentication mechani">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-06T06:05:36.029Z">
+<meta property="og:updated_time" content="2019-12-06T08:39:46.378Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -117,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="https://kakulisen.github.io/2019/11/06/hello-world/"/>
+  <link rel="canonical" href="https://kakulisen.github.io/2019/11/08/kubectl-config/"/>
 
 
 
 
 
-  <title>Hello World | 森里滴话</title>
+  <title>kubectl配置 | 森的技术随笔</title>
   
 
 
@@ -153,7 +153,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">森里滴话</span>
+        <span class="site-title">森的技术随笔</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -179,7 +179,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/%20" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -189,7 +189,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/%20" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -230,16 +230,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://kakulisen.github.io/2019/11/06/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://kakulisen.github.io/2019/11/08/kubectl-config/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="kakulisen">
+      <meta itemprop="name" content="森">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="森里滴话">
+      <meta itemprop="name" content="森的技术随笔">
     </span>
 
     
@@ -247,7 +247,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">kubectl配置</h1>
         
 
         <div class="post-meta">
@@ -259,8 +259,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-06T06:05:36+00:00">
-                2019-11-06
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-08T02:47:18+00:00">
+                2019-11-08
               </time>
             
 
@@ -297,20 +297,22 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <h3 id="参考文档："><a href="#参考文档：" class="headerlink" title="参考文档："></a>参考文档：</h3><ol>
+<li><a href="https://kubernetes.io/docs/reference/kubectl/overview/" target="_blank" rel="noopener">Overview of kubectl</a></li>
+<li><a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands" target="_blank" rel="noopener">kubectl-commands</a></li>
+<li><a href="https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/" target="_blank" rel="noopener">Organizing Cluster Access Using kubeconfig Files</a></li>
+</ol>
+<h3 id="配置文件-kubeconfig-file"><a href="#配置文件-kubeconfig-file" class="headerlink" title="配置文件(kubeconfig file)"></a>配置文件(kubeconfig file)</h3><p>配置文件有什么用呢？<br>用来组织集群的信息，包括集群(cluster)，用户(user)，命名空间(namespace)和授权机制(authentication mechanisms)<br><code>kubectl</code>使用<code>kubeconfig</code>配置文件来发现一些信息，这些信息帮助它选择集群和帮助它与集群中的API server进行通信</p>
+<blockquote>
+<p>我们通常将这个配置文件叫为<code>kubeconfig file</code>，但是这并不意味有一个名为<code>kubeconfig</code>的文件存在。</p>
+</blockquote>
+<p>一般有三种方式指定配置</p>
+<h5 id="1-默认"><a href="#1-默认" class="headerlink" title="1. 默认"></a>1. 默认</h5><p>默认在<code>$HOME/.kube</code>目录下查找一个名字为<code>config</code>的配置文件</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">clusters:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">cluster:</span></span><br><span class="line">    <span class="attr">certificate-authority:</span> <span class="string">/root/.minikube/ca.crt</span></span><br><span class="line">    <span class="attr">server:</span> <span class="string">https://192.168.88.75:8443</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">minikube</span></span><br><span class="line"><span class="attr">contexts:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">context:</span></span><br><span class="line">    <span class="attr">cluster:</span> <span class="string">minikube</span></span><br><span class="line">    <span class="attr">user:</span> <span class="string">minikube</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">minikube</span></span><br><span class="line"><span class="attr">current-context:</span> <span class="string">minikube</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Config</span></span><br><span class="line"><span class="attr">preferences:</span> <span class="string">&#123;&#125;</span></span><br><span class="line"><span class="attr">users:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">minikube</span></span><br><span class="line">  <span class="attr">user:</span></span><br><span class="line">    <span class="attr">client-certificate:</span> <span class="string">/root/.minikube/client.crt</span></span><br><span class="line">    <span class="attr">client-key:</span> <span class="string">/root/.minikube/client.key</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+<h5 id="2-通过环境变量设置"><a href="#2-通过环境变量设置" class="headerlink" title="2. 通过环境变量设置"></a>2. 通过环境变量设置</h5><p>设置 <code>KUBECONFIG</code> 环境变量，指定<code>config</code>的文件位置</p>
+<h5 id="3-指定-kubeconfig选项"><a href="#3-指定-kubeconfig选项" class="headerlink" title="3. 指定--kubeconfig选项"></a>3. 指定<code>--kubeconfig</code>选项</h5><p>在使用<code>kubectl</code>命令时指定<code>--kubeconfig</code>选项指定配置文件位置。<br>这个选项可以通过<code>kubectl options</code>命令查询出来，描述如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--kubeconfig=&apos;&apos;: Path to the kubeconfig file to use for CLI requests.</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -330,6 +332,22 @@
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/06/maven-plugin-execution/" rel="next" title="maven插件之execution">
+                <i class="fa fa-chevron-left"></i> maven插件之execution
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
@@ -392,7 +410,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">kakulisen</p>
+              <p class="site-author-name" itemprop="name">森</p>
               <p class="site-description motion-element" itemprop="description">技术随笔</p>
           </div>
 
@@ -401,9 +419,9 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/%20%7C%7C%20archive">
+                <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -440,7 +458,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文档："><span class="nav-number">1.</span> <span class="nav-text">参考文档：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置文件-kubeconfig-file"><span class="nav-number">2.</span> <span class="nav-text">配置文件(kubeconfig file)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-默认"><span class="nav-number">2.0.1.</span> <span class="nav-text">1. 默认</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-通过环境变量设置"><span class="nav-number">2.0.2.</span> <span class="nav-text">2. 通过环境变量设置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-指定-kubeconfig选项"><span class="nav-number">2.0.3.</span> <span class="nav-text">3. 指定--kubeconfig选项</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -464,7 +482,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">kakulisen</span>
+  <span class="author" itemprop="copyrightHolder">森</span>
 
   
 </div>
