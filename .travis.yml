@@ -1,18 +1,25 @@
 sudo: false
 language: node_js
 node_js:
-  - 10 # use nodejs v10 LTS
+- 10
 cache: npm
 branches:
   only:
-    - source # build master branch only
+  - source
 script:
-  - hexo generate # generate static files
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GH_TOKEN
-  keep_history: true
-  on:
-    branch: source
-  local-dir: public
+- hexo generate
+after_success:
+- cd public
+- git init
+- git config user.name "${USER_NAME}"
+- git config user.email "${USER_EMAIL}"
+- git add .
+- git commit --allow-empty -m 'update site'
+- git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+env:
+  global:
+  - USER_NAME="kakulisen"
+  - USER_EMAIL="18813972746@163.com"
+  - REPO="kakulisen.github.io"
+  - GH_REF="github.com/${USER_NAME}/${REPO}.git"
+  - secure: RBcrkjTGDPx8YDzZmcTHz1GN/cPqLDKq778WCM0wTP2lpH4KbYm0GcPpON/v8upWoyeg7kyV6clNzDVu7s9Ag3P1B5i7V7U+xz/ycvu+lIoJvHXYMWaRAflJrZhs/w+43kWbYH/4mmxVRVTzNAWrm74zlTbBDlcfHc0q6/8iqbQpl6eZOd5lCVz42i+Q2O9TwDpU+V0/h2uTuKQuw97c7XQTtMz1D5VoyLPq31zRMAgTccUnqqxlyAhZ1k7Sb7Xq2nhiU/GijtpYZyqxPy9r2W8RNmhbumM+tLNa5TYj+mRaCbUFvCaejSRRka6sh4FEoSY7akAVDqPetUtXViKJd81y1xL0JuLW5qj/o4MKNdoaLbYKn/J38GxZXXa4BUFi7fi/6u1/jZhZJapOtu46MigVzZcpLUeF4GREln5NkgaW0qalkL+Ig1KkOp9kYZvdn7CsgglNUghU5FM/A1FrwMke6LnImbzbpdMwKjZ62J6bOLihXQXPCzJ/D5pDUWuwbKTn+AdAs1i22mecUpPIWKShF6+2UxOc9+lQUsmwj0VcQ44hpX7VyQUqkpkFmKKq79+eloZA3lL5Vk22GokDpGMbKyQRhGizsAR1ZA786UCO5jmJdcMtl3vUzbkamwtUnmyRHAU5xXXwomciuOeDiwaGUvhQybqg8t59YEeVf8E=
