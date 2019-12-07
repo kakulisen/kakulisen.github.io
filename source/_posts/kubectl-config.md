@@ -1,7 +1,7 @@
 ---
 title: kubectl配置
 date: 2019-11-08 10:47:18
-tags:
+excerpt: kubectl配置
 ---
 
 ### 参考文档：
