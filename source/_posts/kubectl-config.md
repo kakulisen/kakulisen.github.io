@@ -1,7 +1,7 @@
 ---
 title: kubectl配置
 date: 2019-11-08 10:47:18
-excerpt: kubectl配置
+excerpt: kubectl三种配置方式
 ---
 
 ### 参考文档：
