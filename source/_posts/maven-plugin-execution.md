@@ -82,3 +82,7 @@ tags:
 
 
 ### 主动触发
+自 maven 3.3.1开始，maven支持通过指定execution id的方式直接指行插件目标
+```
+mvn myqyeryplugin:queryMojo@execution1
+```
