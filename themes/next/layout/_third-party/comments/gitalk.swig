@@ -1,7 +1,12 @@
 {% if page.comments && theme.gitalk.enable %}
-   <script type="text/javascript">
+
+    <script type="module"> 
         import 'gitalk/dist/gitalk.css';
         import Gitalk from 'gitalk';
+    </script>
+ 
+   <script type="text/javascript">
+
         var gitalk = new Gitalk({
           clientID: '{{ theme.gitalk.ClientID }}',
           clientSecret: '{{ theme.gitalk.ClientSecret }}',
