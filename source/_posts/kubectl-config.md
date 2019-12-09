@@ -2,6 +2,12 @@
 title: kubectl配置
 date: 2019-11-08 10:47:18
 excerpt: kubectl三种配置方式
+categories: 
+- kubernetes
+tags:
+- kubernetes
+- kubectl
+- 配置
 ---
 
 ### 参考文档：

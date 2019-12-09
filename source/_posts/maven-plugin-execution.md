@@ -2,6 +2,12 @@
 title: maven插件之execution
 date: 2019-11-06 17:00:25
 excerpt: 自3.3.1之后，支持主动触发
+categories: 
+- maven
+tags:
+- maven
+- java
+- 构建工具
 ---
 
 参考文档：[Guide to Configuring Plug-ins#Using the \<executions\> Tag](https://maven.apache.org/guides/mini/guide-configuring-plugins.html#Using_the_executions_Tag)
